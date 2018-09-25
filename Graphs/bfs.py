@@ -10,5 +10,11 @@ def bfs(graph, node):
             if n not in seen_nodes:
                 seen_nodes.add(n)
                 queue.append(n)
-graph = {0: [1,2], 1: [2,0], 2: []}
-bfs(graph, 0)
+# graph = {0: [1,2], 1: [2,0], 2: []}
+graph = { "a" : ["c"],
+          "b" : ["c", "e"],
+          "c" : ["a", "b", "d", "e"],
+          "d" : ["c"],
+          "e" : ["c", "b"]
+        }
+bfs(graph, graph.keys()[0]) 

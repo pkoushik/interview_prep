@@ -13,4 +13,10 @@ graph = {1: [2, 3],
          6: [7],
          7: []}
 
-print(dfs(graph, 1))
+graph = { "a" : ["c"],
+          "b" : ["c", "e"],
+          "c" : ["a", "b", "d", "e"],
+          "d" : ["c"],
+          "e" : ["c", "b"]
+        }
+print(dfs(graph, graph.keys()[0]))
